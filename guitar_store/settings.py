@@ -4,6 +4,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INSTALLED_APPS = [
     'guitars',
+    'easy_thumbnails',
 
     'django.contrib.admin',
     'django.contrib.auth',
