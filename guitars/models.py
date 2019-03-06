@@ -5,7 +5,7 @@ from easy_thumbnails.fields import ThumbnailerImageField
 
 class Brand(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
     logo = models.ImageField(upload_to='images/logos/')
     web_address = models.URLField(blank=True)
 
@@ -26,7 +26,7 @@ class Guitar(models.Model):
 
     brand = models.ForeignKey('Brand', on_delete=models.CASCADE)
     model_name = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
     guitar_type = models.CharField(
         max_length=255,
         choices=GUITAR_TYPE_CHOICES,
