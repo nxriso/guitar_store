@@ -14,9 +14,9 @@ class Brand(models.Model):
 
 
 class Guitar(models.Model):
-    ACOUSTIC = 'Acoustic'
-    ELECTRO_ACOUSTIC = 'Electro-Acoustic'
-    ELECTRIC = 'Electric'
+    ACOUSTIC = 'acoustic'
+    ELECTRO_ACOUSTIC = 'electro_acoustic'
+    ELECTRIC = 'electric'
 
     GUITAR_TYPE_CHOICES = (
         (ACOUSTIC, 'Acoustic'),
