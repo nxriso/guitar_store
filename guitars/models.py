@@ -6,7 +6,7 @@ from easy_thumbnails.fields import ThumbnailerImageField
 class Brand(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
-    logo = models.ImageField(upload_to='images/logos')
+    logo = models.ImageField(upload_to='images/logos/')
     web_address = models.URLField(blank=True)
 
     def __str__(self):
